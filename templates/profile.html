@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="profile-box">
+        <div class="pp-container">
+            <img src="{{ profile_pic }}" class="pp-profile"/>
+        </div>
+        <div class="profile-info">
+            <h2 class="profile-name">{{ username }}</h2>
+            <h3 class="profile-bio">{{ user_bio }}</h3>
+        </div>
+    </div>
+{% endblock %}

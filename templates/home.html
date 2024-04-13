@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block body %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class=flashes>
+        {% for message in messages %}
+        <p class="error">{{ message }}</p>
+        {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+    <form method="post" action="{{ url_for('home') }}">
+        <div class="status-update-box" id="status-update-box">
+            <div class="status-update-pp">
+                <div class="pp">
+                    <image src="{{ profile_pic }}" alt=""class="pp"/>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" name="statustext" autocomplete="off" required />
+                <label>What's on your mind?</label>
+            </div>
+            <button type="submit" name="poststatus" value="postclick" class="post-btn">Post</button>
+        </div>
+    </form>
+
+    {% for elem in post_feed %}
+    <div class="post-box">
+        <div class="left-section">
+            <img src="{{ elem['prof_pic']}}" class="pp" alt="{{ elem['username'] }}'s Photo">
+            <p class="uname">{{ elem['username'] }}</p>
+        </div>
+        <div class="right-section">
+            <div class="post-text">{{ elem['post'] }}</div>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

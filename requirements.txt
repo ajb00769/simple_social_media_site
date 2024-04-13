@@ -1,0 +1,4 @@
+better_profanity==0.7.0
+cs50==9.2.5
+Flask==2.2.3
+Werkzeug==2.2.3

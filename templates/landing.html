@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A psuedo-social media site that took inspiration from Unsent Project as part of my CS50 final project submission where users can express things they left unsaid anonymously" />
+    <meta name="author" content="Allen Jay Bercero" />
+    <title>Shameless - Express Words Left Unsaid Anonymously</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <link href="static/css/styles_landing.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form-box login">
+        <div class="logo">
+          <p>
+            <img src="static/images/my_logo2.png" alt="Shameless.ly logo" width="250" />
+          </p>
+        </div>
+        {% if error %}
+          <p class=error><strong></strong> {{ error }}
+        {% endif %}
+        <!-- login form -->
+        <form method="post" action="{{ url_for('login') }}">
+          <!-- email input -->
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <input type="email" name="em" autocomplete="off" required autofocus />
+            <label>Email</label>
+          </div>
+          <!-- password input -->
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="lock-closed"></ion-icon>
+            </span>
+            <input type="password" name="pw" required />
+            <label>Password</label>
+          </div>
+          <!-- remember me + forgot password field -->
+          <div class="remember-forgot">
+            <label>
+              <input type="checkbox" />Remember me </label>
+            <a href="#">Forgot Password?</a>
+          </div>
+          <!-- login button -->
+          <button type="submit" class="btn" name="loginbutton" value="login">Login</button>
+          <!-- register an account field -->
+          <div class="login-register">
+            <p> Don't have an account? <a href="#" class="register-link">Register</a>
+            </p>
+          </div>
+        </form>
+      </div>
+      <!-- registration form -->
+      <div class="form-box register">
+        <h2>Register</h2>
+        <form method="post" action="{{ url_for('login') }}">
+          <!-- username field -->
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="person"></ion-icon>
+            </span>
+            <input type="text" name="uname-reg" autocomplete="off" required />
+            <label>Username</label>
+          </div>
+          <!-- email field -->
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <input type="email" name="email-reg" autocomplete="off" required />
+            <label>E-mail</label>
+          </div>
+          <!-- password field -->
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="lock-closed"></ion-icon>
+            </span>
+            <input type="password" name="pw-reg" required />
+            <label>Password</label>
+          </div>
+          <!-- agree to TCs -->
+          <div class="remember-forgot">
+            <label>
+              <input type="checkbox" />I agree to Shameless.ly's Terms & Conditions </label>
+          </div>
+          <!-- register button -->
+          <button type="submit" class="btn" name="registerbutton" value="register">Register</button>
+          <div class="login-register">
+            <p> Already have an account? <a href="#" class="login-link">Login</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- body contents end here, scripts follow before closing body -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="static/js/scripts.js"></script>
+  </body>
+</html>

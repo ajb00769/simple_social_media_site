@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Questrial', sans-serif;
+}
+
+.menurightalign {
+    float: right;
+    text-align: right;
+    padding-right: 10px;
+    justify-content: space-evenly;
+}
+
+.bannerformat {
+    padding-top: 20px;
+    font-weight: 700;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 2px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+}
+
+body {
+    background-image: url("https://wallpaperaccess.com/full/1261630.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+
+footer {
+    height: 2.5rem;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+}
+
+.footer-div {
+    text-align: center;
+}
+
+.cntnts {
+    padding-top: 50px;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #e9b666;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 700;
+}
+
+.post-btn {
+    width: 60px;
+    height: 45px;
+    background: #e9b666;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.status-update-box {
+    position: relative;
+    width: 600px;
+    height: 70px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .3);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+    display: flex;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.post-box {
+    width: 600px;
+    height: 100px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .3);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.uname {
+    margin: 5px 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.post-text {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.profile-box {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .3);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin: 3% auto;
+    margin-bottom: 30px;
+}
+
+.status-update-box :first-child,
+.status-update-box :nth-child(2),
+.status-update-box :last-child {
+    align-self: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 5px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 700;
+    pointer-events: none;
+    transition: .25s;
+    color: gray;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -50px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+}
+
+.pp {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.pp-profile {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.pp-container {
+    width: 160px;
+    height: 160px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 30px;
+    width: 65%;
+}
+
+.profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.profile-bio {
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 350px;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+.status-update-pp {
+    margin: 10px;
+}
+
+.char-counter {
+    font-size: 8px;
+}
+
+.error {
+    text-align: center;
+    color: red;
+    text-shadow: 1px 1px rgba(0, 0, 0, .5);
+}
+
+.settings-left {
+    margin-right: 10px;
+    width: 150px;
+}
+
+.settings-right {
+    width: 400px;
+    height: 160px;
+    overflow-wrap: break-word;
+    resize: none;
+    white-space: pre-wrap;
+}
+
+.settings-box{
+    display: flex;
+    margin: 20px;
+    width: 100%;
+}
